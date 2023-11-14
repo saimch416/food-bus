@@ -25,7 +25,7 @@ import {
   FaYoutube,
 } from 'react-icons/fa';
 import Stats from '../components/stats';
-// import Insta from '../components/insta'
+
 import OurTeam from '../components/ourteam';
 import Map from '../components/test';
 import Footer from '../components/footer';
@@ -69,7 +69,7 @@ function Home() {
     <Loader />
   ) : (
     <>
-      <Stack spacing={4} paddingX={{ base: 4, md: 8 }}>
+      <Stack spacing={4}>
         <Stack
           position="fixed"
           top="20%"
@@ -101,8 +101,8 @@ function Home() {
         <Map />
         <Testamonials />
         <Instareels />
-        <Footer />
       </Stack>
+      <Footer />
     </>
   );
 }

@@ -75,6 +75,7 @@ function Header() {
       <Flex
         display={{ base: 'flex', md: 'none' }}
         alignItems="center"
+        margin="30px"
         onClick={() => setShowLinks(!showLinks)}
         cursor="pointer"
       >
@@ -94,7 +95,9 @@ function Header() {
         display={{ base: showLinks ? 'flex' : 'none', md: 'flex' }}
         flexDir={{ base: 'column', md: 'row' }}
         width="100%"
+        backgroundColor="#141D74"
         textAlign="center"
+        borderRadius="10px"
         justifyContent="center"
       >
         <Link href="/">

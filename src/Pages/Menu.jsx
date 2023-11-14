@@ -65,10 +65,10 @@ function Menu() {
     <>
       <Header />
       <Spacer h="100px"></Spacer>
-      <Box padding="0px 20vw">
+      <Box marginTop="40px">
         <MenuCard />
       </Box>
-      <Spacer h="100px"></Spacer>
+      <Spacer h="90px"></Spacer>
       <Footer />
     </>
   );

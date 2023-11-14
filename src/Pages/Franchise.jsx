@@ -82,14 +82,18 @@ function Franchise() {
     <>
       <Header />
       <Spacer height="80px"></Spacer>
-      <HStack margin="80px" justifyContent="center">
+      <HStack margin="20px" marginTop="30px" justifyContent="center">
         <Stack>
           <Img src={form} />
         </Stack>
       </HStack>
 
       <Stack>
-        <Text fontSize="98" fontWeight="400" textAlign="center">
+        <Text
+          fontSize={['2xl', '3xl', '4xl']}
+          fontWeight="400"
+          textAlign="center"
+        >
           Be Your Own Boss
         </Text>
         <Text color="#495460" fontSize="18" textAlign="center">
@@ -99,9 +103,10 @@ function Franchise() {
       </Stack>
 
       <Stack
-        w="50vw"
-        padding="50px"
-        marginLeft="25%"
+        w={['90%', '80%', '50vw']}
+        padding={['30px', '40px', '80px']}
+        marginLeft="auto"
+        marginRight="auto"
         marginBottom="50px"
         marginTop="50px"
         border="1px solid #F20808"
@@ -121,89 +126,95 @@ function Franchise() {
               Form submitted successfully!
             </Alert>
           )}
-          <Stack w="25vw">
-            <FormControl isInvalid={!!errors.name}>
-              <Text>Name</Text>
-              <Input
-                type="text"
-                name="name"
-                placeholder="Name"
-                borderRadius="50"
-                h="8vh"
-                value={formData.name}
-                onChange={handleChange}
-              />
-              <FormErrorMessage>{errors.name}</FormErrorMessage>
-            </FormControl>
-            <FormControl isInvalid={!!errors.phone}>
-              <Text>Phone No.</Text>
-              <Input
-                type="number"
-                name="phone"
-                placeholder="x-xxx-xxx-xxx"
-                borderRadius="50"
-                h="8vh"
-                value={formData.phone}
-                onChange={handleChange}
-              />
-              <FormErrorMessage>{errors.phone}</FormErrorMessage>
-            </FormControl>
-            <FormControl isInvalid={!!errors.state}>
-              <Text>State</Text>
-              <Input
-                type="text"
-                name="state"
-                placeholder="State"
-                borderRadius="50"
-                h="8vh"
-                value={formData.state}
-                onChange={handleChange}
-              />
-              <FormErrorMessage>{errors.state}</FormErrorMessage>
-            </FormControl>
-          </Stack>
+          <Stack
+            direction={{ base: 'column', md: 'row' }}
+            justifyContent="space-between"
+            width="100%"
+          >
+            <Stack w={['100%', '100%', '45%']}>
+              <FormControl isInvalid={!!errors.name}>
+                <Text>Name</Text>
+                <Input
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  borderRadius="50px"
+                  h="8vh"
+                  value={formData.name}
+                  onChange={handleChange}
+                />
+                <FormErrorMessage>{errors.name}</FormErrorMessage>
+              </FormControl>
+              <FormControl isInvalid={!!errors.phone}>
+                <Text>Phone No.</Text>
+                <Input
+                  type="number"
+                  name="phone"
+                  placeholder="x-xxx-xxx-xxx"
+                  borderRadius="50"
+                  h="8vh"
+                  value={formData.phone}
+                  onChange={handleChange}
+                />
+                <FormErrorMessage>{errors.phone}</FormErrorMessage>
+              </FormControl>
+              <FormControl isInvalid={!!errors.state}>
+                <Text>State</Text>
+                <Input
+                  type="text"
+                  name="state"
+                  placeholder="State"
+                  borderRadius="50"
+                  h="8vh"
+                  value={formData.state}
+                  onChange={handleChange}
+                />
+                <FormErrorMessage>{errors.state}</FormErrorMessage>
+              </FormControl>
+            </Stack>
 
-          <Stack w="25vw">
-            <FormControl isInvalid={!!errors.email}>
-              <Text>Email</Text>
-              <Input
-                type="email"
-                name="email"
-                placeholder="Email"
-                borderRadius="50"
-                h="8vh"
-                value={formData.email}
-                onChange={handleChange}
-              />
-              <FormErrorMessage>{errors.email}</FormErrorMessage>
-            </FormControl>
-            <FormControl isInvalid={!!errors.city}>
-              <Text>City</Text>
-              <Input
-                type="text"
-                name="city"
-                placeholder="City"
-                borderRadius="50"
-                h="8vh"
-                value={formData.city}
-                onChange={handleChange}
-              />
-              <FormErrorMessage>{errors.city}</FormErrorMessage>
-            </FormControl>
+            <Stack w={['100%', '100%', '45%']}>
+              <FormControl isInvalid={!!errors.email}>
+                <Text>Email</Text>
+                <Input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  borderRadius="50"
+                  h="8vh"
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+                <FormErrorMessage>{errors.email}</FormErrorMessage>
+              </FormControl>
+              <FormControl isInvalid={!!errors.city}>
+                <Text>City</Text>
+                <Input
+                  type="text"
+                  name="city"
+                  placeholder="City"
+                  borderRadius="50"
+                  h="8vh"
+                  value={formData.city}
+                  onChange={handleChange}
+                />
+                <FormErrorMessage>{errors.city}</FormErrorMessage>
+              </FormControl>
 
-            <FormControl isInvalid={!!errors.investment}>
-              <Text>Total Investment Budget</Text>
-              <Input
-                type="number"
-                name="investment"
-                placeholder="x-xxx-xxx-xxx"
-                borderRadius="50"
-                h="8vh"
-                value={formData.investment}
-                onChange={handleChange}
-              />
-              <FormErrorMessage>{errors.investment}</FormErrorMessage>
-            </FormControl>
+              <FormControl isInvalid={!!errors.investment}>
+                <Text>Total Investment Budget</Text>
+                <Input
+                  type="number"
+                  name="investment"
+                  placeholder="x-xxx-xxx-xxx"
+                  borderRadius="50"
+                  h="8vh"
+                  value={formData.investment}
+                  onChange={handleChange}
+                />
+                <FormErrorMessage>{errors.investment}</FormErrorMessage>
+              </FormControl>
+            </Stack>
           </Stack>
         </HStack>
         <FormControl isInvalid={!!errors.description}>
